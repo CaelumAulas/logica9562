@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<h1>Eleitores</h1>
+
+<script>
+
+    var totalEleitores = parseInt(prompt("Informe a quantidade de eleitores:"))
+    var votosBrancos = parseInt(prompt("Informe a quantidade de votos brancos:"))
+    var votosNulos = parseInt(prompt("Informe a quantidade de votos nulos:"))
+    var votosValidos = totalEleitores - votosBrancos - votosNulos
+
+    var percentualBrancos = 100 * votosBrancos / totalEleitores
+    var percentualNulos = 100 * votosNulos / totalEleitores
+    var percentualValidos = 100 * votosValidos / totalEleitores
+
+    document.write(`
+        % de votos brancos: ${percentualBrancos.toFixed(1)}% <br>
+        % de votos nulos: ${percentualNulos.toFixed(1)}% <br>
+        % de votos válidos: ${percentualValidos.toFixed(1)}%
+    `)
+
+
+</script>
