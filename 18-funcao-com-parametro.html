@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<h1>Função com Parâmetros | Confeitaria</h1>
+
+<button onclick="fazerBolo('Chocolate', 'bolo-chocolate.jpg')">
+    Quero o bolo de chocolate
+</button>
+
+<button onclick="fazerBolo('Laranja', 'bolo-laranja.jpg')">
+    Quero o bolo de laranja
+</button>
+
+<button onclick="fazerBolo('Morango', 'bolo-morango.jpg')">
+    Quero o bolo de morango
+</button>
+
+<button onclick="fazerBolo('Baunilha')">
+    Quero o bolo de baunilha
+</button>
+
+<script>
+
+    function fazerBolo(sabor, foto = 'sem-imagem.jpg') 
+    {
+        document.write(`
+            Aqui está seu bolo de ${sabor}... <br>
+            <img src="${foto}" width="300">
+        `)
+    }
+
+</script>

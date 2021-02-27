@@ -1,12 +1,14 @@
 <meta charset="utf-8">
 <h1>Revendedora de Carros</h1>
 
+<script src="js/pegaNumero.js"></script>
+
 <script>
 
-    var salarioFixo = parseFloat(prompt("Salário fixo:").replace(",", "."))
-    var carrosVendidos = parseInt(prompt("Qtd de carros vendidos:"))
-    var comissaoFixaPorCarro = parseFloat(prompt("Comissão por carro vendido: R$").replace(",", "."))
-    var totalVendas = parseFloat(prompt("Valor total das vendas:").replace(",", "."))
+    var salarioFixo = pegaFloat("Salário fixo:")
+    var carrosVendidos = pegaInt("Qtd de carros vendidos:")
+    var comissaoFixaPorCarro = pegaFloat("Comissão por carro vendido: R$")
+    var totalVendas = pegaFloat("Valor total das vendas:")
 
     // total da comissão 5%
     var totalComissaoVendas = totalVendas * 0.05
