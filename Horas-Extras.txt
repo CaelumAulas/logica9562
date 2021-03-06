@@ -1,0 +1,23 @@
+A jornada de trabalho semanal de um funcionário é de 40 horas. O funcionário que trabalhar mais de 40 horas receberá hora extra, cujo cálculo é o valor da hora regular com um acréscimo de 50%. 
+
+Crie um algoritmo que peça para o usuário o número de horas trabalhadas em um mês e o salário por hora e exiba o salário total do funcionário, que deverá ser acrescido das horas extras, caso tenham sido trabalhadas (considere que o mês possua 4 semanas exatas).
+
+
+Do que eu preciso:
+    1) Horas trabalhadas no mês (integer)
+    2) Valor da Hora regular (float)
+
+
+Horas Regulares Mensais = 40 * 4 = 160 horas
+
+    Caso 1 (Sem horas extras): 
+        a) Valor da Hora = R$ 100,00
+        b) Qtd de Horas Trabalhadas = 50
+        c) Salário Final = 50 * 100
+
+    Caso 2 (Com Horas Extras):
+        a) Valor da Hora = R$ 100,00
+        b) Qtd de Horas Trabalhadas = 161
+        c) Salário Regular = 160 * 100 (horas regulars x valor da hora regular)
+        d) Salário Horas Extras = 1 * 150 (horas extras x valor da hora extra)
+        e) Salário Final = Salário Regular + Salário Horas Extras

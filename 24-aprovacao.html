@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<h1>Aprovação do Aluno</h1>
+
+<script src="js/pegaNumero.js"></script>
+<script>
+
+    var nota1 = pegaFloat('Digite a nota 1:')
+    var nota2 = pegaFloat('Digite a nota 2:')
+    var media = (nota1 + nota2) / 2
+    var imagemAprovacao = (media < 6) ? 'reprovado.jpg' : 'aprovado.png'
+
+    document.write(`
+        Média final: ${media.toFixed(1)} <br>
+        <img src="${imagemAprovacao}" width="200">
+    `)
+
+</script>

@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<h1>Saldo Atualizado</h1>
+
+<script src="js/pegaNumero.js"></script>
+<script src="js/formataMoeda.js"></script>
+<script>
+
+    var saldo = pegaFloat('Informe seu saldo:')
+    var debito = pegaFloat('Informe o total de débitos:')
+    var credito = pegaFloat('Informe o total de créditos:')
+
+    var saldoAtualizado = saldo - debito + credito
+
+    document.write(`Saldo Atualizado: ${formataMoeda(saldoAtualizado)} <br>`)
+
+    if (saldoAtualizado > 0)
+    {
+        document.write('<font color="green">Saldo Positivo</font>')
+    }
+    else 
+    {
+        document.write('<font color="red">Saldo Negativo</font>')
+    }
+
+</script>
