@@ -37,6 +37,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
+<script src="js/libIdade.js"></script>
 <script>
 
     // VMasker(campoDataNasc).maskPattern('99/99/9999')
@@ -52,6 +53,17 @@
         var peso = campoPeso.valueAsNumber
         var dataNascimento = campoDataNasc.value
         var imc = peso / altura ** 2
+        var souCardiaco = campoSouCardiaco.checked
+        var frase = ''
+        var dataPedacos = dataNascimento.split("/")
+        var idade = calculaIdade( dataPedacos[0], dataPedacos[1], dataPedacos[2] )
+
+        if (souCardiaco == true || idade < 14) {
+            frase = "PRECISA DE ACOMPANHAMENTO MÉDICO!"
+        }
+        else {
+            frase = "NÃO PRECISA DE ACOMPANHAMENTO MÉDICO!"
+        }
 
         document.write(`
             <h3>SEUS DADOS CADASTRAIS SÃO:</h3>
@@ -59,7 +71,9 @@
             Peso: ${peso} kg <br>
             Altura: ${altura} m <br>
             IMC: ${imc.toFixed(1)} <br>
-            Data de Nascimento: ${dataNascimento}
+            Idade: ${idade} anos <br>
+            Data de Nascimento: ${dataNascimento} <br>
+            ${frase}
         `)
     }
 
