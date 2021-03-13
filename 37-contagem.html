@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<h1>Contagem</h1>
+
+<script src="js/pegaNumero.js"></script>
+<script>
+
+    var numero = pegaInt('Informe um número:')
+
+    document.write('Contando...<br>')
+
+    // for (var contador = 1; contador <= numero; contador++)
+    // {
+    //     document.write(`${contador}... <br>`)
+    // }
+
+    var contador = 1
+    while (contador <= numero) 
+    {
+        document.write(`${contador}...<br>`)
+        contador++
+    }
+
+    document.write('FIM!!!')
+
+</script>
